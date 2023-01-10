@@ -1,0 +1,68 @@
+.first-row {
+  grid-column: span 4;
+}
+
+.second-row {
+  grid-column: span 5;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  max-width: 128rem;
+  background-color: $color-light-xl;
+}
+
+.disabled {
+  cursor: initial;
+}
+
+.invisible {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+.transition-in {
+  animation-name: slide-in;
+  animation-duration: 0.5s;
+}
+
+@keyframes slide-out {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.transition-out {
+  animation-name: slide-out;
+  animation-duration: 0.5s;
+}

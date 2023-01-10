@@ -1,0 +1,116 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  line-height: 1;
+  font-weight: 400;
+  color: #545454;
+  background-color: #f6f6f6;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.container {
+  /* 1280px */
+  max-width: 128rem;
+  margin: 0 auto;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  cursor: pointer;
+  font-size: 100px;
+  width: 100px;
+}
+
+.item,
+.carousel,
+.card {
+  display: flex;
+}
+
+.carousel-wrapper {
+  width: 640px;
+  margin: 0 20px;
+  overflow: hidden;
+}
+
+.card {
+  width: 200px;
+  height: 200px;
+  background: red;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+  cursor: pointer;
+}
+
+.card.activated {
+  background: #ccc;
+}
+
+.item:first-child .card {
+  background: LawnGreen;
+}
+
+.item:last-child .card {
+  background: LightSkyBlue;
+}
+
+.item {
+  gap: 20px;
+}
+
+.carousel {
+  position: relative;
+  left: -640px;
+}
+
+@keyframes move-right {
+  from {
+    left: -640px;
+  }
+  to {
+    left: -1280px;
+  }
+}
+
+.transition-right {
+  animation-name: move-right;
+  animation-duration: 0.5s;
+}
+
+@keyframes move-left {
+  from {
+    left: -640px;
+  }
+  to {
+    left: 0px;
+  }
+}
+
+.transition-left {
+  animation-name: move-left;
+  animation-duration: 0.5s;
+}
+
+.hidden {
+  display: none;
+}

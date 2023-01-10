@@ -1,0 +1,102 @@
+.slider {
+  height: 43.5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  @include respond(phone) {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  &__buttons {
+    @include respond(phone) {
+      order: 2;
+      display: flex;
+      gap: 8rem;
+    }
+  }
+
+  &__arrow {
+    @include btn-round;
+    z-index: 20;
+
+    @include respond(desktop) {
+      position: absolute;
+      top: 50%;
+    }
+
+    @include respond(tablet-p) {
+      position: absolute;
+      top: 50%;
+      gap: 4rem;
+    }
+
+    &--left {
+      left: 0;
+      transform: translate(0%, -50%);
+    }
+
+    &--right {
+      right: 0;
+      transform: translate(0%, -50%);
+    }
+
+    @include respond(phone) {
+      position: inherit;
+      &--left {
+        transform: translate(0%, 0%);
+      }
+
+      &--right {
+        transform: translate(0, 0%);
+      }
+    }
+  }
+
+  &__carousel-wrapper {
+    width: 99rem;
+    margin: 0 auto;
+    overflow: hidden;
+    @include respond(tablet-p) {
+      width: 58rem;
+    }
+    @include respond(phone) {
+      width: 27rem;
+    }
+  }
+
+  &__carousel {
+    position: relative;
+    left: -99rem;
+    transition: transform 1s;
+    display: flex;
+    @include respond(tablet-p) {
+      left: -58rem;
+    }
+    @include respond(phone) {
+      left: -27rem;
+    }
+  }
+  &__slide {
+    width: 120rem;
+    display: flex;
+    gap: 9rem;
+    justify-content: center;
+    transition: transform 1s;
+
+    @include respond(tablet-p) {
+      max-width: 58rem;
+      gap: 4rem;
+    }
+    @include respond(phone) {
+      max-width: 27rem;
+      position: inherit;
+      order: 1;
+    }
+  }
+}

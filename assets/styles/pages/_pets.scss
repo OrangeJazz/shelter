@@ -1,0 +1,101 @@
+.pets {
+  @include container(134.2rem, $color-light-l, 12rem);
+
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  align-items: center;
+  justify-content: center;
+  @include respond(tablet-p) {
+    height: auto;
+    padding: 20rem 3rem 7.5rem 3rem;
+    gap: 3rem;
+  }
+  @include respond(phone) {
+    padding: 16.2rem 1rem 4.2rem 1rem;
+    gap: 4.2rem;
+  }
+
+  &--heading {
+    @include heading;
+    @include heading-3;
+    color: $color-dark-l;
+    text-align: center;
+    max-width: 40rem;
+    @include respond(phone) {
+      max-width: 100%;
+    }
+  }
+
+  .pets__gallary--container {
+    height: 120rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 2.9rem;
+    column-gap: 4rem;
+    @include respond(tablet-p) {
+      height: auto;
+      grid-template-columns: 1fr 1fr;
+      margin-bottom: 1rem;
+      row-gap: 3rem;
+    }
+
+    @include respond(phone) {
+      height: auto;
+      grid-template-columns: 1fr;
+      margin-bottom: 0;
+    }
+
+    @include respond(tablet-p) {
+      .hide-tablet {
+        display: none;
+      }
+    }
+    @include respond(phone) {
+      .hide-phone {
+        display: none;
+      }
+    }
+  }
+
+  .pets__gallary--pages {
+    display: flex;
+    gap: 2.2rem;
+    @include respond(phone) {
+      gap: 1rem;
+    }
+  }
+
+  .pages__btn {
+    @include btn-round;
+    background-color: $color-light-l;
+    stroke: $color-dark-3xl;
+    &:hover,
+    &:visited {
+      background-color: $color-primary-light;
+      border: 2px solid $color-primary-light;
+    }
+  }
+  .btn--active {
+    @include btn-active-page;
+    background-color: $color-primary;
+  }
+
+  .btn--disabled,
+  .btn--disabled:hover,
+  .btn--disabled:link,
+  .btn--disabled:active,
+  .btn--disabled:visited {
+    border: 2px solid $color-dark-s;
+    stroke: $color-dark-s;
+    color: $color-dark-s;
+    background-color: $color-light-l;
+    cursor: initial;
+  }
+
+  .pages__btn--num {
+    @include heading;
+    @include heading-4;
+  }
+}

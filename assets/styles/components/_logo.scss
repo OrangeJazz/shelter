@@ -1,0 +1,9 @@
+.header__logo {
+  @include logo($color-dark-l, $color-dark-l);
+}
+
+.header-main__logo {
+  @include logo($color-primary, $color-light-xl);
+  @include respond(phone) {
+  }
+}

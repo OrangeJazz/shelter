@@ -1,0 +1,267 @@
+/* 
+breakpoints:
+>1280px- desktop
+1280px - tablet-l
+-768px - tablet-p
+-320px - phone*/
+@mixin respond($breakpoint) {
+  @if $breakpoint == desktop {
+    @media (min-width: 1280px) {
+      @content;
+    }
+  }
+  @if $breakpoint == tablet-l {
+    @media (max-width: 1279px) {
+      @content;
+    }
+  }
+  @if $breakpoint == tablet-p {
+    @media (max-width: 1279px) {
+      @content;
+    }
+  }
+  @if $breakpoint == phone {
+    @media (max-width: 767px) {
+      @content;
+    }
+  }
+}
+
+@mixin container($h, $c, $s) {
+  padding: 8rem + $s 4rem 10rem 4rem;
+  height: $h + $s;
+  background-color: $c;
+}
+
+@mixin heading {
+  font-family: $font-main;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@mixin heading-1 {
+  font-size: 3.2rem;
+  line-height: 110%;
+  letter-spacing: 1.75px;
+}
+
+@mixin heading-2 {
+  font-size: 4.4rem;
+  line-height: 130%;
+  @include respond(phone) {
+    display: block;
+    font-size: 2.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 25rem;
+    text-align: center;
+    letter-spacing: 0.06em;
+  }
+}
+
+@mixin heading-3 {
+  font-size: 3.5rem;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  @include respond(phone) {
+    display: block;
+    font-size: 2.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 25rem;
+    text-align: center;
+    letter-spacing: 0.06em;
+  }
+}
+@mixin heading-4 {
+  font-size: 2rem;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+}
+@mixin heading-5 {
+  font-size: 1.5rem;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+}
+
+@mixin btn {
+  display: inline-block;
+  font-family: $font-main;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.7rem;
+  line-height: 130%;
+  padding: 1.3rem 4.3rem;
+  border-radius: 5rem;
+  color: $color-dark-3xl;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+@mixin btn_primary {
+  border: 2px solid $color-primary;
+  background-color: $color-primary;
+  &:hover,
+  &:active {
+    border: 2px solid $color-primary-light;
+    background-color: $color-primary-light;
+  }
+}
+
+@mixin btn_secondary {
+  border: 2px solid $color-primary;
+  background-color: $color-light-s;
+  &:hover,
+  &:active {
+    border: 2px solid $color-primary-light;
+    background-color: $color-primary-light;
+  }
+}
+
+@mixin paragraph {
+  font-family: $font-second;
+  font-weight: 400;
+}
+@mixin paragraph-l {
+  font-size: 1.5rem;
+  line-height: 160%;
+}
+
+@mixin paragraph-s {
+  font-style: italic;
+  font-size: 1.2rem;
+  line-height: 150%;
+}
+
+@mixin btn-round {
+  border-radius: 50%;
+  height: 52px;
+  width: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: $color-dark-3xl;
+  background-color: transparent;
+  border: 2px solid $color-primary;
+  &:hover {
+    border: 2px solid $color-primary-light;
+    background-color: $color-primary-light;
+  }
+}
+
+@mixin btn-active-page {
+  border-radius: 100%;
+  height: 5rem;
+  width: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-dark-3xl;
+  border: 2px solid $color-primary;
+  background-color: $color-primary;
+}
+
+@mixin card {
+  width: 27rem;
+  height: 43.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $color-light-s;
+  border-radius: 9px;
+  gap: 2.8rem;
+  &:hover {
+    box-shadow: 2px 3.5rem 1.4rem rgba(13, 13, 13, 0.04);
+    background-color: $color-light-xl;
+    cursor: pointer;
+  }
+}
+
+@mixin footer-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+@mixin footer__list--item {
+  color: $color-primary;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+@mixin nav($color-link, $color-hover) {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 3.5rem;
+
+  @include respond(tablet-p) {
+    -moz-gap: 3.8rem;
+    gap: 3.6rem;
+  }
+
+  &--link {
+    height: 2.7rem;
+
+    &:link,
+    &:visited {
+      display: inline-block;
+      text-decoration: none;
+      font-size: 1.5rem;
+      line-height: 160%;
+      color: $color-link;
+    }
+
+    &:hover {
+      color: $color-hover;
+    }
+
+    &:active {
+      color: $color-hover;
+      border-bottom: 3px solid $color-primary;
+    }
+  }
+}
+
+@mixin link-active($c) {
+  color: $c;
+  border-bottom: 3px solid $color-primary;
+  cursor: default;
+}
+
+@mixin logo($color-main, $color-sub) {
+  max-width: 18.4rem;
+  text-decoration: none;
+
+  &--main {
+    @include heading;
+    @include heading-1;
+    color: $color-main;
+    padding-bottom: 1rem;
+  }
+
+  &--sub {
+    font-family: $font-second;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+    color: $color-sub;
+    letter-spacing: 1.3px;
+    // letter-spacing: 0.1em;
+  }
+}
+
+@include respond(desktop) {
+}
+@include respond(tablet-l) {
+}
+@include respond(tablet-p) {
+}
+@include respond(phone) {
+}

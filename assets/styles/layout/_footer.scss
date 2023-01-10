@@ -1,0 +1,112 @@
+.footer {
+  background-image: radial-gradient(
+    100% 215.42% at 0% 0%,
+    #5b483a 0%,
+    #262425 100%
+  );
+
+  display: flex;
+
+  @include respond(desktop) {
+    padding: 4rem 4rem 0 4rem;
+    height: 35rem;
+    gap: 16rem;
+  }
+  @include respond(tablet-p) {
+    padding: 3rem 3rem 0 3rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 6.5rem;
+  }
+
+  @include respond(phone) {
+    padding: 3rem 1rem 0 1rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  &__contacts {
+    display: flex;
+    @include respond(desktop) {
+      gap: 14rem;
+      width: 74rem;
+    }
+    @include respond(tablet-p) {
+      gap: 4rem;
+      width: 64.4rem;
+    }
+    @include respond(phone) {
+      flex-direction: column;
+      gap: 4rem;
+      width: 100%;
+      align-items: center;
+    }
+  }
+
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 23.4rem;
+
+    @include respond(desktop) {
+      margin-top: 1.8rem;
+    }
+    @include respond(tablet-p) {
+      margin-top: 0;
+    }
+
+    &--first {
+      @include respond(phone) {
+        height: 20.8rem;
+      }
+    }
+    &--second {
+      @include respond(phone) {
+        height: 22rem;
+      }
+    }
+  }
+
+  &--heading {
+    @include heading;
+    @include heading-3;
+    color: $color-light-xl;
+  }
+
+  .contact__list {
+    @include footer-list;
+    gap: 4.4rem;
+  }
+  .adress__list {
+    @include footer-list;
+    gap: 3.6rem;
+  }
+
+  .adress__list--item,
+  .contact__list--item {
+    @include heading;
+    @include heading-4;
+    @include footer__list--item;
+  }
+
+  &__img {
+    max-width: 30rem;
+    @include respond(phone) {
+      max-width: 26rem;
+    }
+  }
+
+  .footer--link {
+    @include footer__list--item;
+    &:link,
+    &:active,
+    &:hover,
+    &:visited {
+      text-decoration: none;
+      color: $color-primary;
+    }
+  }
+}

@@ -1,0 +1,62 @@
+.header {
+  height: 12rem;
+  padding: 3rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  a:link,
+  a:visited {
+    text-decoration: none;
+  }
+  @include respond(tablet-p) {
+    padding: 3rem 3rem;
+  }
+  @include respond(phone) {
+    padding: 3rem 1rem;
+    min-width: 29.9rem;
+  }
+}
+
+.header-main {
+  position: absolute;
+  height: 6rem;
+  top: 6rem;
+  width: 120rem;
+  // margin: 0 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  a:link,
+  a:visited {
+    text-decoration: none;
+  }
+  @include respond(tablet-p) {
+    top: 3rem;
+    width: 92.2%;
+    // padding: 3rem 3rem;
+  }
+  @include respond(phone) {
+    top: 3rem;
+    min-width: 29.9rem;
+    // padding: 3rem 1rem;
+  }
+
+  // position: absolute;
+  // // top: 6rem;
+  // z-index: 1000;
+  // padding: 3rem 4rem;
+  // display: flex;
+  // justify-content: space-between;
+  // align-items: center;
+  // height: 12rem;
+
+  // a:link,
+  // a:visited {
+  //   text-decoration: none;
+  // }
+  // @include respond(phone) {
+  //   padding: 3rem 0rem;
+  // }
+}

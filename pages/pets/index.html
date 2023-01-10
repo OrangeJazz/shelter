@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Shelter-Our pets</title>
+  </head>
+  <body class="container">
+    <header class="header sticky">
+      <a href="../main/index.html">
+        <div class="header__logo">
+          <h1 class="header__logo--main">Cozy House</h1>
+          <p class="header__logo--sub">Shelter for pets in Boston</p>
+        </div>
+      </a>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li>
+            <a class="nav__list--link" href="../main/index.html"
+              >About the shelter</a
+            >
+          </li>
+          <li>
+            <a class="nav__list--link link--active" href="#pets">Our pets</a>
+          </li>
+          <li>
+            <a class="nav__list--link" href="../main/index.html#help"
+              >Help the shelter</a
+            >
+          </li>
+          <li>
+            <a class="nav__list--link" href="#contacts">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- BURGER -->
+    <a href="#" class="burger__link--pets">
+      <div class="burger-nav--pets burger__btn--pets">
+        <hr class="navigation__icon" />
+        <hr class="navigation__icon" />
+        <hr class="navigation__icon" />
+      </div>
+    </a>
+    <div class="burger__menu--pets inactive hidden">
+      <div class="burger__wrapper--pets">
+        <div class="burger__header--pets">
+          <div class="header__logo">
+            <h1 class="header__logo--main">Cozy House</h1>
+            <p class="header__logo--sub">Shelter for pets in Boston</p>
+          </div>
+          <!-- <div class="burger__btn--pets">
+            <hr class="navigation__icon" />
+            <hr class="navigation__icon" />
+            <hr class="navigation__icon" />
+          </div> -->
+        </div>
+        <ul class="burger__list--pets">
+          <li>
+            <a class="burger__item--pets" href="../main/index.html"
+              >About the shelter</a
+            >
+          </li>
+          <li>
+            <a class="burger__item--pets burger__link-item--active" href="#"
+              >Our pets</a
+            >
+          </li>
+          <li>
+            <a class="burger__item--pets" href="../main/index.html#help"
+              >Help the shelter</a
+            >
+          </li>
+          <li>
+            <a class="burger__item--pets" href="#contacts">Contacts</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="overlay hidden"></div>
+
+    <main class="pets" id="pets">
+      <h3 class="pets--heading">
+        Our friends who<br />
+        are looking for a house
+      </h3>
+      <div class="pets__gallary--container">
+        <div class="card card-tablet card-phone">
+          <div class="card__img--container">
+            <img
+              src="..\..\assets\images\pets-katrine.png"
+              alt="Cat Katrine photo"
+              class="card__img"
+            />
+          </div>
+          <h4 class="card--header">Katrine</h4>
+          <a href="" class="card--btn">Learn more</a>
+        </div>
+        <div class="card card-tablet card-phone">
+          <div class="card__img--container">
+            <img
+              src="..\..\assets\images\pets-jennifer.png"
+              alt="Puppy Jennifer photo"
+              class="card__img"
+            />
+          </div>
+          <h4 class="card--header">Jennifer</h4>
+          <a href="" class="card--btn">Learn more</a>
+        </div>
+        <div class="card card-tablet card-phone">
+          <div class="card__img--container">
+            <img
+              src="..\..\assets\images\pets-woody.png"
+              alt="Dog Woody photo"
+              class="card__img"
+            />
+          </div>
+          <h4 class="card--header">Woody</h4>
+          <a href="" class="card--btn">Learn more</a>
+        </div>
+        <div class="card card-tablet hide-phone">
+          <div class="card__img--container">
+            <img
+              src="..\..\assets\images\pets-sophia.png"
+              alt="Puppy Sophia photo"
+              class="card__img"
+            />
+          </div>
+          <h4 class="card--header">Sophia</h4>
+          <a href="" class="card--btn">Learn more</a>
+        </div>
+        <div class="card card-tablet hide-phone">
+          <div class="card__img--container">
+            <img
+              src="..\..\assets\images\pets-timmy.png"
+              alt="Cat Timmy photo"
+              class="card__img"
+            />
+          </div>
+          <h4 class="card--header">Timmy</h4>
+          <a href="" class="card--btn">Learn more</a>
+        </div>
+        <div class="card card-tablet hide-phone">
+          <div class="card__img--container">
+            <img
+              src="..\..\assets\images/pets-charly.png"
+              alt="Dog Charly photo"
+              class="card__img"
+            />
+          </div>
+          <h4 class="card--header">Charly</h4>
+          <a href="" class="card--btn">Learn more</a>
+        </div>
+        <div class="card hide-tablet hide-phone">
+          <div class="card__img--container">
+            <img
+              src="..\..\assets\images/pets-scarlet.png"
+              alt="Dog Scarlet photo"
+              class="card__img"
+            />
+          </div>
+          <h4 class="card--header">Scarlet</h4>
+          <a href="" class="card--btn">Learn more</a>
+        </div>
+        <div class="card hide-tablet hide-phone">
+          <div class="card__img--container">
+            <img
+              src="../../assets/images/pets-freddie.png"
+              alt="Cat Freddie photo"
+              class="card__img"
+            />
+          </div>
+          <h4 class="card--header">Freddie</h4>
+          <a href="" class="card--btn">Learn more</a>
+        </div>
+      </div>
+      <div class="pets__gallary--pages">
+        <button class="pages__btn btn--disabled" id="btn-leftAll">
+          <svg
+            class="pages__btn--icon"
+            width="25"
+            height="11"
+            viewBox="0 0 25 11"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              class="accord__btn--icon"
+              d="M9.94687 10.7852L0.913671 6.08789V4.98438L9.94687 0.287109V1.625L2.43711 5.53125L9.94687 9.44727V10.7852ZM24.018 10.7852L14.9848 6.08789V4.98438L24.018 0.287109V1.625L16.5082 5.53125L24.018 9.44727V10.7852Z"
+            />
+          </svg>
+        </button>
+        <button class="pages__btn btn--disabled" id="btn-left">
+          <svg
+            class="pages__btn--icon"
+            width="10"
+            height="11"
+            viewBox="0 0 10 11"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M9.98242 10.7852L0.949219 6.08789V4.98438L9.98242 0.287109V1.625L2.47266 5.53125L9.98242 9.44727V10.7852Z"
+            />
+          </svg>
+        </button>
+        <button class="btn--active disabled" id="btn-page">
+          <span class="pages__btn--num">1</span>
+        </button>
+        <button class="pages__btn" id="btn-right">
+          <svg
+            class="pages__btn--icon"
+            width="10"
+            height="11"
+            viewBox="0 0 10 11"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M9.04102 6.08789L0.0078125 10.7852V9.44727L7.51758 5.53125L0.0078125 1.625V0.287109L9.04102 4.98438V6.08789Z"
+              fill="#292929"
+            />
+          </svg>
+        </button>
+        <button class="pages__btn" id="btn-rightAll">
+          <svg
+            class="pages__btn--icon"
+            width="25"
+            height="11"
+            viewBox="0 0 25 11"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.0055 6.08789L0.972265 10.7852V9.44727L8.48203 5.53125L0.972265 1.625V0.287109L10.0055 4.98438V6.08789ZM24.0766 6.08789L15.0434 10.7852V9.44727L22.5531 5.53125L15.0434 1.625V0.287109L24.0766 4.98438V6.08789Z"
+              fill="#292929"
+            />
+          </svg>
+        </button>
+      </div>
+    </main>
+
+    <footer class="footer" id="contacts">
+      <div class="footer__contacts">
+        <adress class="contacts contacts--first">
+          <h3 class="footer--heading">For questions and suggestions</h3>
+          <ul class="contact__list">
+            <li class="contact__list--item">
+              <a href="mailto: email@shelter.com" class="footer--link">
+                <img src="../../assets/icons/mail.svg" alt="Mail icon" /></a
+              ><a href="mailto: email@shelter.com" class="footer--link"
+                ><span>email@shelter.com</span></a
+              >
+            </li>
+            <li class="contact__list--item">
+              <a href="tel:+13-674-567-75-54" class="footer--link">
+                <img src="../../assets/icons/phone.svg" alt="Phone icon" /></a
+              ><a href="tel:+13-674-567-75-54" class="footer--link"
+                ><span>+13 674 567 75 54</span></a
+              >
+            </li>
+          </ul>
+        </adress>
+        <adress class="contacts contacts--second"
+          ><h3 class="footer--heading">We are waiting for your visit</h3>
+          <ul class="adress__list">
+            <li class="adress__list--item">
+              <a
+                href="https://www.google.com/maps/place/53%C2%B013'42.9%22N+50%C2%B011'45.2%22E/@53.2285682,50.1937021,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xe46e440ecda0c245!8m2!3d53.2285682!4d50.1958908"
+                target="_blank"
+                class="footer--link"
+                ><img src="../../assets/icons/pin.svg" alt="Pin icon" /></a
+              ><a
+                href="https://www.google.com/maps/place/53%C2%B013'42.9%22N+50%C2%B011'45.2%22E/@53.2285682,50.1937021,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xe46e440ecda0c245!8m2!3d53.2285682!4d50.1958908"
+                target="_blank"
+                class="footer--link"
+                ><span
+                  >1 Central Street, Boston (entrance from the store)</span
+                ></a
+              >
+            </li>
+            <li class="adress__list--item">
+              <a
+                href="https://www.google.com/maps/place/53%C2%B013'42.9%22N+50%C2%B011'45.2%22E/@53.2269939,50.1642548,16.25z/data=!4m5!3m4!1s0x0:0xe46e440ecda0c245!8m2!3d53.2285682!4d50.1958908"
+                target="_blank"
+                class="footer--link"
+                ><img src="../../assets/icons/pin.svg" alt="Pin icon" /></a
+              ><a
+                href="https://www.google.com/maps/place/53%C2%B013'42.9%22N+50%C2%B011'45.2%22E/@53.2269939,50.1642548,16.25z/data=!4m5!3m4!1s0x0:0xe46e440ecda0c245!8m2!3d53.2285682!4d50.1958908"
+                target="_blank"
+                class="footer--link"
+                ><span>18 South Park, London </span></a
+              >
+            </li>
+          </ul>
+        </adress>
+      </div>
+      <div class="footer__img--container">
+        <img
+          src="../../assets/images/footer-puppy.png"
+          alt="Pretty puppy"
+          class="footer__img"
+        />
+      </div>
+    </footer>
+    <div class="modal__overlay hidden"></div>
+    <div class="modal inactive hidden">
+      <div class="btn-close">
+        <svg
+          width="12"
+          height="12"
+          viewBox="0 0 12 12"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M7.42618 6.00003L11.7046 1.72158C12.0985 1.32775 12.0985 0.689213 11.7046 0.295433C11.3108 -0.0984027 10.6723 -0.0984027 10.2785 0.295433L5.99998 4.57394L1.72148 0.295377C1.32765 -0.098459 0.68917 -0.098459 0.295334 0.295377C-0.0984448 0.689213 -0.0984448 1.32775 0.295334 1.72153L4.57383 5.99997L0.295334 10.2785C-0.0984448 10.6723 -0.0984448 11.3108 0.295334 11.7046C0.68917 12.0985 1.32765 12.0985 1.72148 11.7046L5.99998 7.42612L10.2785 11.7046C10.6723 12.0985 11.3108 12.0985 11.7046 11.7046C12.0985 11.3108 12.0985 10.6723 11.7046 10.2785L7.42618 6.00003Z"
+            fill="#292929"
+          />
+        </svg>
+      </div>
+      <div class="modal__wrapper">
+        <div class="modal__img--container">
+          <img
+            src="../../assets/images/pets-charly.png"
+            alt="Pet"
+            class="modal__img"
+          />
+        </div>
+        <div class="modal__content">
+          <h3>Name</h3>
+          <h4>Type and breed</h4>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla ad
+            cum quia nesciunt eos sint, ipsam temporibus molestias voluptates
+            eius adipisci impedit. Iste asperiores perferendis nihil nostrum
+            non. Non, dolore!
+          </p>
+          <ul>
+            <li>
+              <span>Age:</span>
+              Lorem
+            </li>
+            <li>
+              <span>Inoculations:</span>
+              None
+            </li>
+            <li>
+              <span>Diseases:</span>
+              None
+            </li>
+            <li>
+              <span>Parasites:</span>
+              None
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script defer src="script.js"></script>
+  </body>
+</html>
